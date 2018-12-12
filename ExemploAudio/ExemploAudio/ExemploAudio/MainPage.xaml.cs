@@ -21,6 +21,7 @@ namespace ExemploAudio
             //:::::::::::::::::::::::::::::::::::
             // ::::::::::: INSTRUÇÕES :::::::::::
             //:::::::::::::::::::::::::::::::::::
+            // https://blog.xamarin.com/adding-sound-xamarin-forms-app
             // Baixar Plugin: Xam.Plugin.SimpleAudioPlayer
             // Colocar arquivo MP3 na pasta Assets do Android com BuildAction = AndroidAsset
             // Dar Play() no áudio como função abaixo
