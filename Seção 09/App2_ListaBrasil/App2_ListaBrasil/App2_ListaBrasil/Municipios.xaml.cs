@@ -31,10 +31,6 @@ namespace App2_ListaBrasil
             ListaFiltradaMunicipio =  ListaInternaMunicipio.Where(a => a.nome.Contains(args.NewTextValue)).ToList();
 
             ListaMunicipios.ItemsSource = ListaFiltradaMunicipio;
-
-
-            
-            
         }
 
     }
