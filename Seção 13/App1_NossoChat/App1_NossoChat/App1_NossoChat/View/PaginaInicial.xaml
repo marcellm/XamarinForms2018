@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1_NossoChat.View.PaginaInicial"
+             BackgroundColor="#111111">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+                <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" VerticalOptions="Start" Padding="10">
+                    <Label Text="NossoChat" TextColor="White" FontSize="20" />
+                </StackLayout>
+
+                <StackLayout
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand">
+                    <Entry Text="{Binding Nome}" Placeholder="Usuário" BackgroundColor="White" TextColor="#111111" HorizontalOptions="FillAndExpand" />
+                    <Entry Text="{Binding Senha}" Placeholder="Senha" IsPassword="True" BackgroundColor="White" TextColor="#111111" HorizontalOptions="FillAndExpand" />
+                    <Button BackgroundColor="#333333" TextColor="White" Text="Acessar/Cadastrar" Command="{Binding AcessarCommand}" />
+                    <Label Text="{Binding Mensagem}" TextColor="White" />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout BackgroundColor="#111111" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" IsVisible="{Binding Carregando}">
+                <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <ActivityIndicator IsRunning="True" Color="#FFFFFF" />
+                    <Label TextColor="#FFFFFF" Text="Logando..." />
+                </StackLayout>
+            </StackLayout>
+            <StackLayout  BackgroundColor="#FF4444" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,1,1,0.1" IsVisible="{Binding MensagemErro}" Padding="7" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <Label Text="Ocorreu problema no processamento! Tente novamente" TextColor="#FFFFFF" />
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
